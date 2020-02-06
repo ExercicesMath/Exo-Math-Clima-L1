@@ -900,7 +900,7 @@ $E(t)=E_0(1+0,03)^t= E_0\, e^{\log (1,03)t}= 5 10^3 e^{\log (1,03)t}$.
      $$
 \end{solution}
 
-    \item  Il est facile d'imaginer (bitcoin, netflix, 5G, etc), la consommation d'énergie pendant le 21ème siècle pourrait continuer de croître de la même manière. La terre a des ressources finies - la quantité totale d'énergie stockée est peut être estimée par l'équation d'Einstein $E_T = m_T.c^2$, où $m_T$ est la masse terrestre (environ $6\times 10^{24} kg$) et $c$ est la vitesse de la lumière $3 10^8$ m/s. Combien de siècles nous avons avant de consommer la totalité de l'énergie terrestre? Comparer avec l'âge de la Terre.
+    \item  Il est facile d'imaginer (bitcoin, netflix, 5G, etc), la consommation d'énergie pendant le 21ème siècle pourrait continuer de croître de la même manière. La terre a des ressources finies - la quantité totale d'énergie stockée est peut être estimée par l'équation d'Einstein $E_T = m_T.c^2$, où $m_T$ est la masse terrestre (environ $6\times 10^{24} kg$) et $c$ est la vitesse de la lumière $3\times 10^8$ m/s. Combien de siècles nous avons avant de consommer la totalité de l'énergie terrestre? Comparer avec l'âge de la Terre.
     
 \begin{solution}
     Il faut d'abord calculer $E_T=m_T. c^2= 5\times 10^{35}$ J $\sim 10^{26}$ Twh. Il faut maintenant résoudre l'équation
@@ -911,6 +911,29 @@ $E(t)=E_0(1+0,03)^t= E_0\, e^{\log (1,03)t}= 5 10^3 e^{\log (1,03)t}$.
      On trouve 
      $$T=1856\sim 18,5 \,\text{siècles}$$
      
+\end{solution}
+
+\item Mais soyons optimistes: supposons que nous effectuons une conversion complète à l'énergie solaire. Sachant que la masse du soleil est d'environ  $2\times10^{30}$ kg, si nous continuons de croître au même rythme, combien de temps nous reste avant de consommer la totalité de l'énergie nucléaire du soleil?
+\begin{solution}
+    Il faut d'abord calculer $E_{soleil}=m_{soleil}. c^2= 2\times 10^{30}\times (3\times 10^8)^2 =2\times 10^{30}\times 9\times 10^{16}= 1.8\times 10^{47}$ J $\sim 5\times 10^{31}$ Twh. Il faut maintenant résoudre l'équation
+     $$
+     \log (1,03)*(5000).((1,03)^T-1)=5*10^{31}
+     $$
+     
+     On trouve 
+     $$T=2300\,\,\, ans$$
+     
+\end{solution}
+\item Pour pousser encore plus loin les limites, sachant que la voie lactée représente environ $1.5\times 10^{12}$ fois la masse solaire, combien de temps faudra-t-il pour consommer toute son énergie?
+
+\begin{solution}
+ Même argument, calculer $E_{VL}=m_{VL}. c^2= 1.5\times 2\times 10^{42}\times (3\times 10^8)^2 =3\times 10^{42}\times 9\times 10^{16}= 2.7\times 10^{58}$ J $\sim 7.5\times 10^{41}$ Twh. Il faut maintenant résoudre l'équation
+     $$
+     \log (1,03)*(5000).((1,03)^T-1)=7.5\times 10^{41}
+     $$
+     
+     On trouve 
+     $$T=3092\,\,\, ans$$
 \end{solution}
 \end{enumerate}
 \end{exo}
