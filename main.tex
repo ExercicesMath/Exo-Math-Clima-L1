@@ -210,7 +210,7 @@ Croissance Exponentielle, Populations, Énergie, Climat et Économie}
 \maketitle
 
 \begin{abstract}
-Certains exercices (marqués $\blacksquare$) sont encore sous une forme primitive.
+Certains exercices (marqués $\blacksquare$) sont encore sous une forme primitive. 
 \end{abstract}
 
 \tableofcontents
@@ -940,9 +940,148 @@ $E(t)=E_0(1+0,03)^t= E_0\, e^{\log (1,03)t}= 5 10^3 e^{\log (1,03)t}$.
 
 
 
+\begin{exo}[$\blacksquare$ Bilan énergétique de la planète et effet de Serre, \href{http://step.ipgp.fr/images/e/ec/Bernard_geodynext_td1_corr.pdf}{Source Ici}]
+Le énergie solaire reçu  par la Terre au sommet de l'atmosphère est donnée par la formula
+
+
+$$E_{entrant}= \underbrace{(1-A)}_{facteur \,\,\,d'absortion}\times \underbrace{\pi r^2}_{Aire \,\,\,Section}\times \underbrace{S}_{Fluxe\,\,\, solaire}$$
 
 
 
+\begin{center}
+    \includegraphics[scale=0.4]{energyin.png}
+\end{center}
+
+Par contre, l'énergie sortant $E_{sortant}$, par la loi de Stefan-Boltzmann, ne dépend que de la température de la Terre et de l'aire de sa surface:
+
+$$E_{sortant}= \underbrace{4\pi r^2}_{Aire \,\,surface }\times \underbrace{\sigma}_{constant\,\, de\,\, Stefan-Boltzmann}\times \underbrace{T^4}_{temperature\,\,de\,\,la\,\, Terre}$$
+
+En sachant que:
+\begin{itemize}
+    \item $A=0.34$ (facteur de réflexion).
+    \item $r= 6 371 000 m$
+    \item $\sigma=5.67\times 10^{-8} W.m^{-2} K_{-4}$
+    \item $S=1.37\times 10^3 W.m^{-2}$
+\end{itemize}
+
+\begin{enumerate}
+\item Montrer que, en supposant l'équilibre énergétique, on a
+
+$$
+(1-A)\pi r^2 S= 4\pi r^2 \sigma T^4
+$$
+
+Calculer la température moyenne globale de la terre et comparer avec la température réel.
+
+\begin{solution}
+Pour avoir l'équilibre énergétique, on a besoin que
+
+$$
+E_{entrant}=E_{sortant}
+$$
+
+$$
+(1-A)\pi r^2 S= 4\pi r^2 \sigma T^4
+$$
+
+\noindent donc
+
+$$
+T=(\frac{(1-A) S}{4.\sigma})^{\frac{1}{4}}=( \frac{0.66\times 1.37\times 10^3}{4\times 5.67\times 10^{-8}})^{\frac{1}{4}}=255 K= -18\,\,\,Celsius
+$$
+
+En réalité, la température moyenne globale est de $14 \,\,Celsius$. La différence est provoquée par l'effet de Serre: l'atmosphère empêche que une petit partie de l'énergie s'échappe.
+\end{solution}
+
+\item Supposons que la Terre est couverte de glace. Dans ce cas le facteur de réflexion est de $A= 0.6$. Calculer la température de la Terre.
+
+\begin{solution}
+$$T= 221\,\, K = -52 \,\, Celsius$$
+\end{solution}
+
+\item En augmentant la concentration de CO2 dans l'atmosphère, on empêche plus d'énergie de sortir.
+
+\begin{center}
+    \includegraphics[scale=0.3]{serre2.png}
+\end{center}
+
+Une façon d'introduire l'effet de Serre dans le modèle précédant, c'est d'introduire un paramètre $\epsilon\in [0,1[$ tel que
+
+$$
+(1-A)\pi r^2 S= 4\pi r^2 \sigma T^4 (1-\underbrace{\epsilon}_{effet\,\,de\,\,Serre})
+$$
+
+Calculer la valeur de $\epsilon$ correspondant à la température réel.
+
+\begin{solution}
+$$\epsilon=0.39$$
+\end{solution}
+
+\item En sachant que pour Venus on a
+\begin{itemize}
+    \item $A=0.7$ (facteur de réflexion).
+    \item $T= 242$
+    \item $S= 2619 W.m^{-2}$
+\end{itemize}
+
+\noindent Calculer $\epsilon_{Venus}$
+
+\begin{solution}
+$$
+\epsilon_{Venus}= 0.988 \sim 1
+$$
+Donc, Venus a un effet de Serre beaucoup plus fort. En fait, l'atmosphère de Venus contient essentiellement que du $CO_2$.
+\end{solution}
+
+\item Calculer les limites
+
+$$\lim_{\epsilon\to 0} T(\epsilon)$$
+
+$$\lim_{\epsilon\to 1^{-}} T(\epsilon)$$
+
+\begin{solution}
+$$\lim_{\epsilon\to 0} T(\epsilon)= 250 K$$
+
+Par contre, si l'effet de Serre augment la température de la Terre aussi:
+$$\lim_{\epsilon\to 1^{-}} T(\epsilon)= +\infty $$
+
+\begin{center}
+\includegraphics[scale=0.5]{serre.png}
+\end{center}
+
+\end{solution}
+
+\item L'une des observations de base sur le réchauffement climatique c'est que le facteur $\epsilon$ que quantifie l'effet de Serre est une fonction du logarithme de la concentration de $CO_2$ dans l'atmosphère:
+
+$$
+\epsilon= k\log([CO_2])
+$$
+
+Calculer $T$ en fonction de $[CO_2]$ et calculer sa dérivée.
+
+\begin{solution}
+$$
+T([CO_2])= [\frac{(1-A)S}{4(1-k\log([CO_2]))}]^{\frac{1}{4}}
+$$
+
+Par la règle de dérivation pour la fonction composée:
+$$
+\frac{dT}{d[CO_2]}= \frac{T}{4(1-k\log[CO_2])}\frac{k}{[CO_2]}
+$$
+\end{solution}
+
+
+\end{enumerate}
+
+On pourrait être tranquillisé par le fait que la température ne dépende que du logarithme de la concentration de $[CO_2]$. Malheureusement, pour compenser, la concentration de $[CO_2]$ augmente de façon exponentielle depuis 2 siècles...
+
+\begin{center}
+    \includegraphics[scale=0.4]{co2increase.png}
+\end{center}
+
+\end{exo}
+
+\vspace{3cm}
 
 \begin{exo}[EROI - Taux de retour énergétique et le prix du pétrole, \href{https://www.sciencedirect.com/science/article/pii/S0301421511006975}{Source ici}]
 Pour produire du pétrole on a besoin d'énergie pour faire  fonctionner les machines d'extraction. Plus précisément, si $E_T$ c'est la quantité totale d'énergie extraite en équivalent pétrole, il y a une partie $E_{M}$ d'énergie qu'il faut redonner aux machines d'extraction et une partie $E_{L}$ qu'on peut livrer dans l'économie.
