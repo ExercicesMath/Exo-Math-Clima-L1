@@ -226,6 +226,10 @@ Comparez les distances parcourues par l'être humain ordinaire et l'exponentiell
 \medskip
 \begin{solution}
 L'être humain ordinaire a marché $30*0.5m=15$ m. L'être humain exponentielle a marché $2^{30}*0.5=2^{29}= 536870.912$ Km, plus que la distance  entre la terre et la lune.
+
+\begin{center}
+    \includegraphics[scale=0.5]{exp2.png}
+\end{center}
 \end{solution}
 
 \end{exo}
@@ -878,13 +882,13 @@ En 1900, la quantité totale d'énergie consommée par l'humanité était d'envi
 \item Si on fixe 1900 comme l'année zéro, donner la formule pour $E(t)$ la quantité d'énergie consommée par l'humanité pendant l'année 1900+t.
 
 \begin{solution}
-$E(t)=E_0(1+0,03)^t= E_0\, e^{\log (1,03)t}= 5 10^3 e^{\log (1,03)t}$.
+$E(t)=E_0(1+0,03)^t= E_0\, e^{\log (1,03)t}= 5 \times 10^3 e^{\log (1,03)t}$.
 \end{solution}
    
 \item Calculer la quantité d'énergie consommée par l'humanité en 2013 (vous pouvez comparer avec les informations qu'on trouve sur  Internet).
 
 \begin{solution}
-    La formule de la question précédente donne $E(113) \simeq 10^5$ Twh.
+    La formule de la question précédente donne $E(113) \simeq 1.4\times 10^5$ Twh.
 \end{solution}
 
    \item L'intégralité de l'énergie consommée entre 1900 et 1900+T est donnée par l'intégrale
@@ -894,7 +898,7 @@ $E(t)=E_0(1+0,03)^t= E_0\, e^{\log (1,03)t}= 5 10^3 e^{\log (1,03)t}$.
 \begin{solution}
      $$Q(T)= \int_{0}^T E(t).dt= \int_{0}^t E_0\, e^{\log (1,03)t}.dt=E_0 \int_{0}^T \, e^{\log (1,03)t}.dt $$
      $$
-     = \log (1,03).E_0 [ e^{\log (1,03)t}]_{0}^{T}= \log (1,03).E_0.(e^{\log (1,03)T}-1)
+     = \frac{1}{\log (1,03)}.E_0 [ e^{\log (1,03)t}]_{0}^{T}= \frac{1}{\log (1,03)}.E_0.(e^{\log (1,03)T}-1)
      $$
 \end{solution}
 
@@ -903,11 +907,16 @@ $E(t)=E_0(1+0,03)^t= E_0\, e^{\log (1,03)t}= 5 10^3 e^{\log (1,03)t}$.
 \begin{solution}
     Il faut d'abord calculer $E_T=m_T. c^2= 5\times 10^{35}$ J $\sim 10^{26}$ Twh. Il faut maintenant résoudre l'équation
      $$
-     \log (1,03)*(5000).((1,03)^T-1)=10^{26}
+     \frac{1}{\log (1,03)}*(5000).((1,03)^T-1)=10^{26}
      $$
      
-     On trouve 
-     $$T=1856\sim 18,5 \,\text{siècles}$$
+     $$
+     (1.03)^T=1+10^{26}*\log(1.03)\frac{1}{5000}
+     $$
+     
+     $$T=1618$$
+     
+     \noindent donc $1618-120=1498$ ans puisque on à commencé en 1900.
      
 \end{solution}
 
@@ -915,28 +924,32 @@ $E(t)=E_0(1+0,03)^t= E_0\, e^{\log (1,03)t}= 5 10^3 e^{\log (1,03)t}$.
 \begin{solution}
     Il faut d'abord calculer $E_{soleil}=m_{soleil}. c^2= 2\times 10^{30}\times (3\times 10^8)^2 =2\times 10^{30}\times 9\times 10^{16}= 1.8\times 10^{47}$ J $\sim 5\times 10^{31}$ Twh. Il faut maintenant résoudre l'équation
      $$
-     \log (1,03)*(5000).((1,03)^T-1)=5*10^{31}
+     \frac{1}{\log (1,03)}*(5000).((1,03)^T-1)=5*10^{31}
      $$
      
      On trouve 
-     $$T=2300\,\,\, ans$$
+     $$T=2062$$
      
+     Donc, $2062-120= 1942$ ans.
 \end{solution}
 \item Pour pousser encore plus loin les limites, sachant que la voie lactée représente environ $1.5\times 10^{12}$ fois la masse solaire, combien de temps faudra-t-il pour consommer toute son énergie?
 
 \begin{solution}
  Même argument, calculer $E_{VL}=m_{VL}. c^2= 1.5\times 2\times 10^{42}\times (3\times 10^8)^2 =3\times 10^{42}\times 9\times 10^{16}= 2.7\times 10^{58}$ J $\sim 7.5\times 10^{41}$ Twh. Il faut maintenant résoudre l'équation
      $$
-     \log (1,03)*(5000).((1,03)^T-1)=7.5\times 10^{41}
+     \frac{1}{\log (1,03)}*(5000).((1,03)^T-1)=7.5\times 10^{41}
      $$
      
      On trouve 
-     $$T=3092\,\,\, ans$$
+     $$T=2854\,\,\, $$
+     
+     donc $2854-120=2734$ ans
 \end{solution}
 \end{enumerate}
 \end{exo}
 
 
+\vspace{1cm}
 
 \begin{exo}[Bilan énergétique de la planète et effet de Serre, \href{http://step.ipgp.fr/images/e/ec/Bernard_geodynext_td1_corr.pdf}{Source Ici}]
 Le énergie solaire reçu  par la Terre au sommet de l'atmosphère est donnée par la formula
